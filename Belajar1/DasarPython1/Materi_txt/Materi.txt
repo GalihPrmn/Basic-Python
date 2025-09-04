@@ -1,0 +1,90 @@
+PYTHON ITU ENTERPRETER
+Bisa Juga di compile dengan cara (lebih cepat di eksekusi)
+    python3 -m py_compile main.py
+
+***COMMENT*
+
+# Comment 1 Baris
+""" Comment
+Multi Baris"""
+
+***CONCATE*
+print("Hai, Nama saya " , nama , " dari jabar" ) -> Tanda koma untuk tipe data campuran
+print("Hai, Nama saya " + nama + " dari jabar" ) -> Tanda plus untuk tipe data string aja
+
+***TIPE DATA*
+- Angka Satuan      = integer (int)
+- Angka Dengan Koma = float
+- Kumpulan Karakter = string (str)
+- Biner true/false  = boolean (bool)
+
+***TIPE DATA KHUSUS*
+- Bilangan Kompleks = complex
+- Bahasa C          = import tipe data C ke Python (from ctypes import c_double/c_char)
+
+
+***CASTING TIPE DATA* Merubah tipe data ke tipe data yang lain
+x = 1 -> data int (Yang lain juga sama)
+dataString = str(x)     -> Jika char,maka tidak bisa jadi int(kecuali char nya angka)
+                        -> Jika bool, maka akan false jika string nya kosong
+dataFloat = float(x)    -> jika float dijadikan int, maka akan dibulatkan ke bawah
+dataBool = bool(x)      -> jika nol, maka akan false
+
+
+***INPUT*
+- Default tipe data nya string
+- harus di casting kalo mau di ubah ke tipe data yang lain
+- contoh -> number = int(input("Masukan Angka :"))
+
+
+***OPERASI ARITMATIKA* -> contoh 10 dan 3
+- Tambah                    = +     = 13
+- Kurang                    = -     = 7
+- Kali                      = *     = 30
+- Bagi                      = /     = 3.33333333
+- Eksponen/Pangkat          = **    = 1000
+- Modulus/Sisa Bagi         = %     = 1
+- Floor Division/Dibulatkan = //    = 3
+- Prioritas Operasi         =   1. Kurung ()
+                                2. Eksponen/Pangkat 
+                                3. Kali, Bagi, Modulus, FloorDivision
+                                4. Tambah, Kurang
+
+***OPERASI KOMPARASI* -> Hasilnya True/False
+- Lebih Besar Dari              >
+- Kurang Dari                   <
+- Lebih Dari Sama Dengan        >=
+- Kurang Dari Sama Dengan       <=
+- Sama Dengan                   ==
+- Tidak Sama Dengan             !=
+- Membandingkan Memory/Object   is -> dan ada juga 'is not', kebalikan is -> Contoh dibawah
+        x = 5
+        y = 5
+        hasil = x is y
+        hasil2 = x is not y
+        print("Nilai x", x , ", Id nya:", hex(id(x))) #hasil 0xb374a8
+        print("Nilai y", y , ", Id nya:", hex(id(y))) #hasil 0xb374a8
+        print(hasil) -> akan true
+        print(hasil2) -> akan false
+        #kesimpulan -> jika ada nilai yang sama, variable/object tsb akan dimasukan ke memory yang sama(lebih efesien)
+
+***OPERASI LOGIKA/BOOLEAN*
+- NOT -> ! Kebalikannya -> var2 = not var1
+- OR  -> | Jika salah satu nilai nya TRUE, maka hasilnya adalah true
+- AND -> & Jika salah satu nilai nya FALSE, maka hasilnya adalah false
+- XOR -> ^ jika ada 2 nilai berbeda(true & false), maka hasilnya adalah true
+
+***OPERASI BITWISE/BINER* ->Tidak Terlalu Butuh
+
+
+***OPERASI ASSIGNMENT* -> Penyingkatan
+- a = 5
+- a += 1 -> a = a + 1
+- a -= 2 -> a = a - 2
+- a *= 5 -> a = a * 5
+- a /= 2 -> a = a / 2
+- a %= 3 -> a = a % 3
+- a //= 3 -> a = a // 3
+- a **= 3 -> a = a ** 3
+
+

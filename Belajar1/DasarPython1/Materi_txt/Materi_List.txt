@@ -1,0 +1,87 @@
+LIST -> Kumpulan data yang ada di dalam variable (Array versi Python)
+
+dataRange = range(0, 10, 2) #range(start, stop, step)
+dataList = list(dataRange)
+print(dataList)
+
+# Membuat List dengan for loop, list comprehension
+dataListFor = [i for i in range(1, 10, 2)]
+print(dataListFor)
+
+# Membuat List dengan For If
+dataListForIf = [i for i in range(0, 10) if i not in dataListFor]
+print(dataListForIf)
+
+
+***MANIPULASI****************************************
+-> Mengambil data               -> Pake Index (dari 0 data pertama, -1 mulai dari data terakhir)
+-> Mengambil Panjang Data(List) -> len(dataList)
+-> Menambah Data                -> tambah data bisa milih posisi nya    -> data.insert(posisi, valuenya)
+                                -> tambah data tapi di posisi akhir     -> data.append(value)
+-> Menggabungkan List           -> Menambah List dengan List            -> data.extend(newData)
+-> Merubah data                 -> data[index] = Value
+-> Menghapus data               -> data.remove(value)   -> case sensitive 
+                                -> data.pop()           -> data akhir nya dihapus (tapi kalo di kasih variable, dia akan mengambil data akhir)
+
+
+***OPERASI****************************************
+-> dataAngka.count(value) -> Mencari ada berapa angka 'value' di list (contoh : angka 2 di list ini ada 5 buah)
+-> data.index(value) -> Mencari Nilai Index berdasarkan 'Value' nya
+-> dataAngka.sort()  -> Mengurutkan angka dari angka terkecil dan jika huruf akan diurutkan berdasarkan huruf pertama(abjad)
+-> data.reverse()    -> Membalikan List
+
+
+***COPY LIST****************************************
+a = ["Galih", "Dimas", "Adit"]
+b = a -> Ini Salah, Karena jika list b dirubah, list a juka akan berubah (Pass By Reference)
+
+c = a.copy() -> Ini Benar -> jika list c berubah, tidak akan merubah list a nya (Full Duplikat)
+
+
+***NESTED LIST*** -> List didalam List (List Bersarang) *************************************
+dataMahasiswa = [
+    ["Galih", 18, "Membaca"],
+    ["Dimas", 19, "Main Game"],
+    ["Ari", 20, "Olahraga"]
+]
+print(dataMahasiswa[0][1]) 
+
+
+
+***COPY NESTED LIST* -> Jika Isi List Nya Variable/Bukan Mungkin *************************************
+copy list -> Jika isi list nya dimasukin pake variable, maka address nya akan sama
+
+data1 = [1,2]
+data2 = [3,4]
+dataCopy = [data1, data2]
+from copy import deepcopy
+dataCopyKedua = deepcopy(dataCopy)
+
+Shallow Copy -> data.copy()
+DeepCopy     -> deepcopy(dataCopy)
+
+ 
+***LOOPING LIST*** -> REKOMENDASI NO 1 dan 5 *************************************
+1. For loop ->
+    for angka in dataAngka: pass
+         print(f"Data Nya -> {angka}")
+2. For loop dengan range ->
+    panjang = len(dataAngka)
+    for i in range(panjang):
+        print(f"Angka Ke -> {dataAngka[i]}")
+3. While loop ->
+    panjang = len(dataAngka)
+    i = 0
+    while i < panjang:
+        print(f"Angka Ke -> {dataAngka[i]}")
+        i += 1
+4. Comprehension -> *SINGKAT SANGAT*
+    [print(f"Data Random Nya = {i}") for i in data]
+5. Enumerate ->
+    for index, data in enumerate(data):
+        print(f"Index-{index}, Data = {data}")
+
+
+***TUPLES AND SET****************************************
+- Tuple -> Kayak List, Tapi Tidak Bisa Dirubah/Dimanipulasi(immutable) -> data = (1,2,3,4)
+- Set   -> Kayak List, Tapi Tidak ada Index (bisa dimanipulasi. himpunan) -> data = {1,2,3,4}

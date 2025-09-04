@@ -1,0 +1,32 @@
+DICTIONARY -> Assosiative Array (Key : Value) -> Mirip Named array di PHP
+-> Pake Kurung Kurawal {} , Kalo List biasa pake kurung siku []
+
+data = {
+    'key' : 'Value',
+}
+print(data['nama'])
+
+
+***OPERATOR DICTIONARY****************************************
+- len(var)          -> Menghitung Panjang Dictionary
+- KEY in data       -> Cek apakah key ada di dalam dictionary
+- data.get('key', 'Error')      -> Mengambil data (pengganti data['key'] , menegaskan bahwa ini dictionary)
+- data.update({'key':'value'})  -> Jika key nya ada, lakukan update. Jika Key tidak ada, lakukan tambah
+- del data['key']               -> Delete datanya
+
+
+***LOOPING****************************************
+- data.keys()   -> Mengambil Key nya saja
+- data.values() -> Mengambil Value nya saja
+- data.items()  -> Mengambbil key dan Value
+
+
+***COPY DICTIONARY****************************************
+- data.copy() -> Sama Kayak list
+
+- var = data.pop('key') -> Memindahkan data di dictionary ke Variable (jadi data di dict ilang, karena di ambil variable)
+- var = data.popitem()  -> sama kayak diatas, tapi ini ngambil data paling terakhir
+
+***MULTI KEYS and NESTING***
+-> dalam 1 dictionary, bisa memuat banyak tipe data
+-> ada dictionary didalam dictionary

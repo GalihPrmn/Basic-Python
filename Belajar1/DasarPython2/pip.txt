@@ -1,0 +1,17 @@
+python3 -m venv nameVenv
+
+source venv/bin/activate
+source /home/galih/Penyimpanan/Pemrograman/Python/Belajar1/zLibrary/bin/activate
+
+pip list
+
+pip install numpy
+
+deactivate
+
+-> menampilkan semua library Python yang terinstall di lingkungan (venv) kamu, beserta versinya.
+pip freeze > requirements.txt
+
+-> Install semua yang ada di requirements.txt
+pip install -r requirements.txt
+

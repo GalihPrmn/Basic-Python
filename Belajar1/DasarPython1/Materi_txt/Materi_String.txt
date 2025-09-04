@@ -1,0 +1,62 @@
+***STRING*
+1. print("Apakah Kamu 'Roh'? ") atau print('Apakah Kamu "Roh"? ')
+2. print('Hari ini adalah hari jum\'at')    ->harus pake \ kalo kutip 1 nya mau dipake lagi
+3. print('C:\\Home\\Penyimpanan')           -> Jika Mau menampilankan backslash pada karakter pada string, harus memakai 2 blackslash
+4. \t -> tab pada string
+5. \b -> backspace / menghapus karakter sebelumnya
+6. \n -> LF New Line / garis baru  
+   \r -> CR OS Lama ini mah
+   \r\n -> Di Di windows biasanya
+7. FORMAT STRING -> print(f"Halo {nama}, Apa kabar?") -> lebih clean, penyambungan antara varianbe dengan string nya -> bisa juga operasi aritmatika
+   {angka:d} -> decimal
+   {angka:,} -> memisahkan angka ribuan
+   {angka:.3f} -> menampilkan angka setelah titik/koma nya berapa digit
+   {angka:+d} -> menampilkan plus
+
+*String Literal Atau RAW**************************************
+1. print(r"C:\New Folder")  -> semua akan di anggap string (RAW)
+2. print(""" Ini Multiline, Bisa Ke bawah """) -> Multiline Literal -> Bisa juga digabungkan raw dan literal
+
+
+***OPERASI DAN MANIPULASI STRING**************************************
+1. +        -> Menyambung String (Concanate) 
+2. len()    -> Menghitung Panjang String -> len(variable yang di cek)
+
+        -----Operator String-------*************************************
+1. in       -> Cek apakah ada karakter apa di dalam string -> print("P" in nama_lengkap) -> case sensitive
+2. not in   -> kebalikan in (nyari yang tidak ada)
+3. 10*|*10  -> mengulang string -> print(10*"Wk", "Wk"*10)
+4. index[0] -> Indexing -> print("Index ke - =", nama_lengkap[0:5]) -> ngambil index nya dari 0 sampai 5 (tapi 5 nya gak diambil, cuma samapi 4)
+            -> kalo mines ambil yang belakang/paling akhir
+            -> nama_lengkap[0:10:2] -> 0 sampai 10 tapi diloncatin/ngambilnya per 2 index
+5. min()    -> item paling kecil
+6. max()    -> item paling besar -> berdasarkan ascii code
+
+
+
+        -----Operator dalam bentuk Method----*************************************
+1. .count() -> menghitung jumlah char yang kita mau -> print(nama_lengkap.count("a"))
+
+
+
+
+        ---OPERASI STRING---*************************************
+1. .upper()      -> Mengubah ke huruf besar 
+2. .lower()      -> Mengubah ke huruf kecil
+3. .startswith(x)-> Cek Huruf Pertama nya apakah sesuai dengan x
+3. .endswith(x)  -> Cek Huruf Akhir nya apakah sesuai dengan x
+4. .join(x)      -> Menyatukan Elemen List menjadi String, dengan pemisah | List -> String | listToStr = "x".join(Buah)
+5. .split(x)     -> Memecah String berdasarkan demiliter(pemisah) | String ->              | List strToList = listToStr.split('x')
+6. .rjust(x, y)  -> Alokasi karakter pengganti 10*"" | .ljust dan .center | nama = "Galih".center(x, y) = x berapa space, y space nya mau apa (20, "-")
+7. .strip(x)     -> Menghilangkah karater yang kita mau/ spasi diawal dan akhir
+
+        ---Di Cek dengan isX method---*************************************
+Contoh -> nama_lengkap.islower() -> apakah isi var nama_lengkap kecil semua? jika ya balikan nilai true
+1. .islower()   -> apakah semua huruf alphabet kecil
+2. .isupper()   -> apakah semua huruf alphabet besar
+3. .isalpha()   -> apakah hanya terdiri dari a-z (alphabet)
+4. .isalnum()   -> apakah hanya terdiri dari huruf dan angka
+5. .isdigit()   -> apakah hanya angka
+6. .isdecimal() -> apakah hanya angka (digit decumal) tapi lebih ketat
+7. .isspace()   -> apakah hanya string kosong/tab/new line
+8. .istitle()   -> apakah semua kata dimulai dari huruf besar

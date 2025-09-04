@@ -1,0 +1,14 @@
+New File
+Daftar Mahasiswa
+1. Desi
+2. Mia Azahra
+
+
+| Mode   | Keterangan                                                      |
+| ------ | --------------------------------------------------------------- |
+| `"w"`  | Write → menulis file baru, kalau ada file lama akan **ditimpa** |
+| `"a"`  | Append → menambah di akhir file, tidak menimpa                  |
+| `"x"`  | Exclusive creation → membuat file baru, kalau sudah ada → error |
+| `"w+"` | Write + Read                                                    |
+| `"a+"` | Append + Read                                                   |
+| `"r+"` | Read + Write (tanpa hapus isi file)                             |

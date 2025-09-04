@@ -1,0 +1,101 @@
+
+***Sintaks Dasar***
+def helloWorld():
+    print("Halo Dunia")
+
+***cara panggil nya*** -> Pemanggilan Fungsi harus setelah dibuat fungsinya (karena python ENTERPRETER/kode nya dieksekusi baris per baris)
+helloWorld() 
+
+
+***FUNCTION dengan ARGUMENT*****************************************************
+def tambah(angka1, angka2): -> Angka1 dan Angka2 itu Argument nya
+    hasil = angka1 + angka2
+    print(hasil)
+
+tambah(100, 50) -> Bisa kita isi saat memanggil function nya
+
+
+
+***FUNCTION dengan return**************************************************
+-> Input -> function -> Output
+-> return itu bisa di tampung lagi di dalam varibale (jadi bisa di pakai lagi)
+        def kuadrat(x):
+            return x**2
+        y = kuadrat(5) + kuadrat(2) 
+
+-> Bisa Juga returnnya Banyak
+
+
+***FUNCTION Default Argument****************************************
+-> def sayHello(nama = "User!"): 
+    print(f"Wellcome {nama}")
+
+-> Saat Memanggil function, bisa juga manggil nama argument nya supaya tidak bingung
+            def hitungPangkat(angka, pangkat = 2):
+                 return angka**pangkat
+            hasil = hitungPangkat(angka=5, pangkat=3) -> Ini Manggil nama Argument
+
+-> bisa juga hanya mengubah salah satu argument (jika sudah ada default argumen nya)
+            hasil = hitungPangkat(angka=5) -> pangkat default nya 2
+
+
+***TYPE HINTS***
+-> Mengatur tipe data untuk parameter di function (default nya -> any/bisa semua)
+-> Sintaks 
+                def paraf(angka1:int) -> int: 
+                                      -> int: (ini Output/return nya harus int)
+-> Pake return (any), kalo gak pake (none)
+
+
+
+*** ARGS PADA FUNCTION **************************************
+-> Ini adalah argument tapi dinamis (bisa berubah-ubah sesuai input nya)  | output nya tuple | Tanda utamanya *args
+
+def tambah(*args): # Tanda utamanya */bintang -> namanya bebas
+    output = 0
+    for angka in args:
+        output += angka
+    return output
+hasil = tambah(2,2,2,2,2,2,2,2,2,2,2)
+
+-> Jadi Argument nya bisa kita isi semaunya
+
+
+
+*** KWARGS PADA FUNCTION **************************************
+-> Hampir sama kayak args, tapi ini outputnya dictionary | tanda utamanya **kwargs
+
+def gracias(**kwargs): #-> Versi named dari args biasa
+    nama = kwargs['nama']
+    umur = kwargs['umur']
+    tinggi = kwargs['tinggi']
+    print(f"Namanya {nama}, Umur {umur} Tahun, dengan tinggi {tinggi} cm")
+
+gracias(nama="Galih", umur=19, tinggi=180)
+
+
+***LAMBDA Function ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-> output = lambda argument:expression
+-> Kayak function versi ringkas
+
+hasilPangkat = lambda angka:angka**2
+print(f"Hasil = {hasilPangkat(5)}")
+
+hasilPangkat2 = lambda angka1,angka2: angka1**angka2
+print(f"Hasil = {hasilPangkat2(5, 3)}")
+
+-> Biasanya digunakan untuk  -> Sort/Map/Filter/Reduce
+
+
+*** ANONYMOUS FUNCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-> Teknik Currying
+
+-> Kayak Nested Function (Function didalam Function)
+def pangkat(n):
+    return lambda angka:angka**n
+
+pangkat2 = pangkat(2)
+
+print(f"Pangkat 2 = {pangkat2(5)}")
+
+
