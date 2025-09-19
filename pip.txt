@@ -1,7 +1,7 @@
 python3 -m venv nameVenv
 
 source venv/bin/activate
-source /home/galih/Penyimpanan/Pemrograman/Python/Belajar1/zLibrary/bin/activate
+source /home/galih/Penyimpanan/Pemrograman/Python/Basic-Python/Belajar1/zLibrary/bin/activate
 
 pip list
 
